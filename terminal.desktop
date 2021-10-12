@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Terminal
+Name[tr]=Terminal
+Comment=Use the command line
+Comment[tr]=Komut satırını kullan
+Keywords=shell;prompt;command;commandline;cmd;
+Keywords[tr]=shell;kabuk;istem;komut;komut satırı;cmd;
+Exec=terminal %U
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GTK;System;TerminalEmulator;
