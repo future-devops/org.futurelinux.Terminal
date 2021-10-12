@@ -1,4 +1,4 @@
-/* Author: Fuat Bölük <mektup@fuatboluk.com.tr> */
+/* The Future OS Developer Team <info@futurelinux.org> */
 
 
 /* Key Press */
