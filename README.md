@@ -6,7 +6,7 @@
 
 # Screenshot:
   
-  ![Alt text](https://github.com/future-devops/org.futurelinux.Terminal/blob/main/terminal.png "Terminal Screenshot")
+  ![Alt text](https://github.com/future-devops/org.futurelinux.Terminal/blob/stable/terminal.png "Terminal Screenshot")
 
 # Features:
 
