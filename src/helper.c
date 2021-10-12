@@ -1,4 +1,4 @@
-/* Author: Fuat Bölük <fuat@fuxproject.org> */
+/* Author: Fuat Bölük <mektup@fuatboluk.com.tr> */
 
 
 /* UTF-8 Decode */
@@ -22,3 +22,6 @@ void utf8_decode(char *dst, const char *src)
     }
     *dst++ = '\0';
 }
+
+
+/* End */

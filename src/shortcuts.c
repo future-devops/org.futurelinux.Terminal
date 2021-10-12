@@ -1,4 +1,4 @@
-/* Author: Fuat Bölük <fuat@fuxproject.org> */
+/* Author: Fuat Bölük <mektup@fuatboluk.com.tr> */
 
 
 /* Key Press */
@@ -51,3 +51,6 @@ static gboolean on_key_press(GtkWidget *terminal, GdkEventKey *event, gpointer u
     }
     return FALSE; 
 }
+
+
+/* End */

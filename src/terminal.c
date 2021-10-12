@@ -1,4 +1,4 @@
-/* Author: Fuat Bölük <fuat@fuxproject.org> */
+/* Author: Fuat Bölük <mektup@fuatboluk.com.tr> */
 
 
 #include <gtk/gtk.h>
@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stddef.h>
 #include <ctype.h>
 
 #include <gdk/gdkkeysyms.h>
@@ -21,6 +22,11 @@
 #include "functions.c"
 
 
+#define WIDTH  960
+#define HEIGHT 472
+
+
+/* CallBack */
 static void on_temrinal_command_spawned(VteTerminal *terminal G_GNUC_UNUSED, GPid pid G_GNUC_UNUSED,
                                         GError *error, gpointer user_data)
 {
@@ -50,12 +56,12 @@ int main(int argc, char *argv[])
     GdkRGBA back_rgba = { 0, 0, 0, 0.9 };
     GdkRGBA front_rgba = { 1, 1, 1, 1.0 };
     PangoFontDescription *font = NULL;
-    GdkVisual *visual; 
+    GdkVisual *visual;
 
     gtk_init(&argc, &argv);
 
     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    gtk_window_set_default_size(GTK_WINDOW(window), 765, 360);
+    gtk_window_set_default_size(GTK_WINDOW(window), WIDTH, HEIGHT);
     gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
     gtk_window_set_icon_name(GTK_WINDOW(window), "utilities-terminal");
 
@@ -83,8 +89,8 @@ int main(int argc, char *argv[])
     gtk_scrolled_window_set_overlay_scrolling(GTK_SCROLLED_WINDOW(scrolled), 5);
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
-    gtk_scrolled_window_set_min_content_width(GTK_SCROLLED_WINDOW(scrolled), 765);
-    gtk_scrolled_window_set_min_content_height(GTK_SCROLLED_WINDOW(scrolled), 360);
+    gtk_scrolled_window_set_min_content_width(GTK_SCROLLED_WINDOW(scrolled), WIDTH);
+    gtk_scrolled_window_set_min_content_height(GTK_SCROLLED_WINDOW(scrolled), HEIGHT);
 
     terminal = vte_terminal_new();
     vte_terminal_set_color_background(VTE_TERMINAL(terminal), &back_rgba);
@@ -140,9 +146,12 @@ int main(int argc, char *argv[])
     gtk_container_add(GTK_CONTAINER(window), scrolled);
     gtk_widget_show_all(scrolled);
 
-    gtk_widget_set_size_request(window, 765, 360);
+    gtk_widget_set_size_request(window, WIDTH, HEIGHT);
     gtk_widget_show_all(window);
 
     gtk_main();
     return 0;
 }
+
+
+/* End */

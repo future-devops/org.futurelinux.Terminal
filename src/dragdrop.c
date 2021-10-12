@@ -1,4 +1,4 @@
-/* Author: Fuat Bölük <fuat@fuxproject.org> */
+/* Author: Fuat Bölük <mektup@fuatboluk.com.tr> */
 
 
 /* Drag Defines */
@@ -88,3 +88,6 @@ static gboolean on_drag_data_received(GtkWidget *terminal, GdkDragContext *conte
     gtk_drag_finish(context, success, success_data, time);
     g_free(uris);
 }
+
+
+/* End */
