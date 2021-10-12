@@ -5,11 +5,11 @@ terminal: src/terminal.c
 
 install:
 	mv -f terminal /usr/bin
-	cp -f terminal.desktop /usr/share/applications
+	cp -f org.futurelinux.Terminal.desktop /usr/share/applications
 
 uninstall:
 	rm -f /usr/bin/terminal
-	rm -f /usr/share/applications/terminal.desktop
+	rm -f /usr/share/applications/org.futurelinux.Terminal.desktop
 
 .PHONY: clean
 
