@@ -26,6 +26,7 @@
   
 # Requirements:  
 
+  * intltool
   * gtk3-devel
   * vte291-devel
 
