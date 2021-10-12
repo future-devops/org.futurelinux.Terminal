@@ -4,12 +4,13 @@ terminal: src/terminal.c
 	gcc `pkg-config --cflags --libs gtk+-3.0 vte-2.91` -o terminal $^
 
 install:
-	mv -f terminal /app/usr/bin
-	cp -f terminal.desktop /app/usr/share/applications
+	mv -f terminal build/files/bin
+	mkdir -p build/files/usr/share/applications
+	cp -f terminal.desktop build/files/usr/share/applications
 
 uninstall:
-	rm -f /app/usr/bin/terminal
-	rm -f /app/usr/share/applications/terminal.desktop
+	rm -f build/files/bin/terminal
+	rm -f build/files/usr/share/applications/terminal.desktop
 	
 native-install:
 	mv -f terminal /usr/bin
